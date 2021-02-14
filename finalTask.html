@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание заказчика</title>
+    <script type="application/javascript" src="finalTask.js"></script>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        table td, tr, th{
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        #resultTable{
+            visibility: hidden;
+        }
+        #resultTable table, th, td{
+            width: 200;
+        }
+
+        button{
+            position: fixed;
+        }
+
+        .less_than_80{
+            background-color: rgb(252, 206, 206);
+            color:red;
+        }
+
+        .more_than_80{
+            background-color: rgb(204, 223, 212);
+            color: green;
+        }
+
+        #toTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: gainsboro;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            }
+    </style>
+</head>
+<body>
+    <h2>Таблица проверок</h2>
+    <br>
+    <div id="equipmentsList">
+        <select id="select">
+            <option disabled selected>Выберите оборудование</option>
+        </select>
+    </div>
+    <br><br>
+    <div id="check">
+        <table id="checkTable"></table>
+    </div>
+    <br>
+    <input type="button" value="Снять выделение" id="uncheckAll">
+    <input type="button" value="Завершить проверку" id="submitBtn">
+    <br><br>
+    <table id="resultTable">
+        <thead>
+            <th>Дата и время начала проверки</th>
+            <th>Оборудование</th>
+            <th>Процент выполненных требований</th>
+        </thead>
+        <tbody></tbody>
+    </table>   
+    <input type="button" value="Наверх" id="toTopBtn">
+</body>
+</html>
